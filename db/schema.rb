@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2024_10_09_031853) do
 
   create_table "users", force: :cascade do |t|
@@ -18,6 +19,31 @@ ActiveRecord::Schema.define(version: 2024_10_09_031853) do
     t.string "mail"
     t.string "address"
     t.string "image"
+=======
+ActiveRecord::Schema.define(version: 2024_10_09_034321) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "product_classes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.string "explanation"
+    t.integer "user_id"
+    t.integer "product_class_id"
+    t.string "image"
+    t.string "sale"
+>>>>>>> 92d6043e919469c83a86c3002d1a9e6d362163d6
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
