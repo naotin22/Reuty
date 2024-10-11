@@ -20,3 +20,42 @@ ActiveRecord::Schema.define(version: 2024_10_09_032556) do
   end
 
 end
+
+ActiveRecord::Schema.define(version: 2024_10_09_031853) do
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "password"
+    t.string "mail"
+    t.string "address"
+    t.string "image"
+  end
+end
+
+ActiveRecord::Schema.define(version: 2024_10_09_034321) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "product_classes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.string "explanation"
+    t.integer "user_id"
+    t.integer "product_class_id"
+    t.string "image"
+    t.string "sale"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+end
