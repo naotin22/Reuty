@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_09_034321) do
-
-  create_table "purchases", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2024_10_11_031224) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "product_id"
@@ -44,10 +37,30 @@ ActiveRecord::Schema.define(version: 2024_10_09_034321) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "questions", force: :cascade do |t|
     t.integer "product_id"
     t.integer "user_id"
     t.string "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "report_comments", force: :cascade do |t|
+    t.string "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.integer "product_id"
+    t.string "report_comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -61,4 +74,5 @@ ActiveRecord::Schema.define(version: 2024_10_09_034321) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
 end

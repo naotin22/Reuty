@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :report_comments
+  resources :reports
   resources :questions
   resources :users
   resources :favorites
