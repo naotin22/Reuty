@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questions
   resources :users
   resources :favorites
   resources :product_classes
