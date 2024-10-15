@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :report_classes
   resources :report_comments
   resources :reports
   resources :questions

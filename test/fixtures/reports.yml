@@ -2,8 +2,10 @@
 
 one:
   product_id: 1
+  user.id: 1
   report_comment: MyString
 
 two:
   product_id: 1
+  user.id: 1
   report_comment: MyString
