@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_11_031224) do
+ActiveRecord::Schema.define(version: 2024_10_15_060648) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "product_id"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2024_10_11_031224) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "report_comments", force: :cascade do |t|
+  create_table "report_classes", force: :cascade do |t|
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2024_10_11_031224) do
 
   create_table "reports", force: :cascade do |t|
     t.integer "product_id"
+    t.integer "user_id"
     t.string "report_comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
