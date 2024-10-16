@@ -32,12 +32,12 @@ p33 = Product.create(name: "U3数学の教科書", price:1200, explanation: "出
 p34 = Product.create(name: "U3青鞄", price:900, explanation: "出雲商業の鞄です", user_id: u3.id, product_class_id: pc3.id, sale: "販売中")
 
 #通報種別
-rc1 = Report_class.create(comment: "不適切な商品である")
-rc2 = Report_class.create(comment: "商品と名前が一致していない")
-rc3 = Report_class.create(comment: "過剰な金額")
-rc4 = Report_class.create(comment: "商品についての説明が不十分")
-rc5 = Report_class.create(comment: "商品を発送してくれない")
-rc6 = Report_class.create(comment: "商品が破損している")
+rc1 = ReportClass.create(comment: "不適切な商品である")
+rc2 = ReportClass.create(comment: "商品と名前が一致していない")
+rc3 = ReportClass.create(comment: "過剰な金額")
+rc4 = ReportClass.create(comment: "商品についての説明が不十分")
+rc5 = ReportClass.create(comment: "商品を発送してくれない")
+rc6 = ReportClass.create(comment: "商品が破損している")
 
 #佐藤がらいきのU2男子制服に不適切な商品であると通報した
 r1 = Report.create(product_id: p21.id, user_id: u1.id, report_comment: "不適切な商品である")
