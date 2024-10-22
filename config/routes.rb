@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "home" => "home#index"
   get "product_detail" => "product_detail#index"
-  
+  get "make_account" => "make_account#index"
 end
