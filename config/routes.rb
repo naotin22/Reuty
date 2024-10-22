@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   get "product_detail" => "product_detail#index"
   get "product_manage" => "product_manage#index"
   get "like" => "like#index"
-  
+  get "make_account" => "make_account#index"
 end
