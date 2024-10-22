@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   
   def index
-    @test = "てすと"
+    @products = Product.all
+    @product_classes = ProductClass.all
   end
-
+  
 end

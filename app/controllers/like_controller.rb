@@ -1,7 +1,7 @@
 class LikeController < ApplicationController
   
   def index
-    @test = "てすと"
+    @favorites = Favorite.all
   end
 
 end
