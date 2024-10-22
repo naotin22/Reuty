@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "product_manage" => "product_manage#index"
   get "like" => "like#index"
   get "make_account" => "make_account#index"
+  get "login" => "login#index"
 end
