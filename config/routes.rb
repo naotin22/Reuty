@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "home" => "home#index"
   get "product_detail" => "product_detail#index"
-  
+  get "put_list" => "put_list#index"
+  get "put_entry" => "put_entry#index"
 end
