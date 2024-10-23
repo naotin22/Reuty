@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get "like" => "like#index"
   get "make_account" => "make_account#index"
   get "login" => "login#index"
+  get "report_list" => "report_list#index"
 end
