@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :purchases
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "home" => "home#index"
+  get "product_detail/:id", to: "product_detail#index", as: :product_detail
   get "product_detail" => "product_detail#index"
   get "product_manage" => "product_manage#index"
   get "like" => "like#index"
