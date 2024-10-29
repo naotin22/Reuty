@@ -13,4 +13,11 @@ Rails.application.routes.draw do
   get "product_detail" => "product_detail#index"
   get "put_list" => "put_list#index"
   get "put_entry" => "put_entry#index"
+  get "product_manage" => "product_manage#index"
+  get "like" => "like#index"
+  get "make_account" => "make_account#index"
+  get "login" => "login#index"
+  get "customer_report" => "customer_report#index"
+  get "manage" => "manage#index"
+  get "report_completed" => "report_completed#index"
 end
