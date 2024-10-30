@@ -4,4 +4,6 @@ class ProductDetailController < ApplicationController
     @test = "てすと"
   end
 
+  def show
+  end
 end
