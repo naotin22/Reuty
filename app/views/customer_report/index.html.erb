@@ -1,0 +1,19 @@
+<%= form_tag("") do %>
+<ul>
+    <li><%= check_box "customer_report", "不適切な商品である" %>不適切な商品である</li>
+    <li><%= check_box "customer_report", "商品と名前が一致していない" %>商品と名前が一致していない</li>
+    <li><%= check_box "customer_report", "過剰な金額" %>過剰な金額</li>
+    <li><%= check_box "customer_report", "商品についての説明が不十分" %>商品についての説明が不十分</li>
+    <li><%= check_box "customer_report", "商品を発送してくれない" %>商品を発送してくれない</li>
+    <li><%= check_box "customer_report", "商品が破損している" %>商品が破損している</li>
+    
+</ul>
+
+
+
+
+<a href= 'http://localhost:3000/report_completed'>報告</a>
+<p><a href= 'http://localhost:3000/product_detail'>戻る</a></p>
+<% end %>
+
+
