@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   get "customer_report" => "customer_report#index"
   get "manage" => "manage#index"
   get "report_completed" => "report_completed#index"
+  get "report_list" => "report_list#index"
+  get "seller_info" => "seller_info#index"
 end

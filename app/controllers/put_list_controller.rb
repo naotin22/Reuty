@@ -1,7 +1,10 @@
 class PutListController < ApplicationController
 
   def index
-    @test = "てすと"
+    @users = User.all
+    @products = Product.all
+
+    Product where()
   end
 end
 
