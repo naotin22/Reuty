@@ -26,7 +26,16 @@
             <div>
                 <%= image_tag("/assets/purchases.png") %>
             </div>
+            <div>
+                <%=  form_tag("/questions") do %>
+                    <%= hidden_field :comment, :product_id, value: @product.user.id %>
+                    <%= text_field :comment, :comment %>
+                    <%= submit_tag "質問" %>
+                <% end %>
+            </div>
+            <div>
 
+            </div>
         </div>
     </div>
 </div>
