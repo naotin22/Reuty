@@ -1,1 +1,33 @@
 <p id="notice"><%= notice %></p>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div>
+                <%= @product.user.image %>
+                <%= @product.user.name %>
+            </div>
+            <div>
+                <%= @product.image %>
+            </div>
+            <div>
+                <%= @product.name %>
+            </div>
+            <div>
+                ￥<%= @product.price %>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <%= link_to image_tag("/assets/report.png"), customer_report_path %>
+            </div>
+            <div>
+                <%= @product.explanation %>
+            </div>
+            <div>
+                <%= image_tag("/assets/purchases.png") %>
+            </div>
+
+        </div>
+    </div>
+</div>
+
