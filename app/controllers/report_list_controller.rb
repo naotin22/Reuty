@@ -1,7 +1,7 @@
 class ReportListController < ApplicationController
   
   def index
-    @test = "てすと"
+    @reports = Report.all
   end
 
 end

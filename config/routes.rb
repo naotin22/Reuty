@@ -16,8 +16,11 @@ Rails.application.routes.draw do
   get "put_entry" => "put_entry#index"
   get "product_manage" => "product_manage#index"
   get "like" => "like#index"
-  get "make_account" => "make_account#index"
-  get "login" => "login#index"
+
+  get "make_account", to: "make_account#index", as: :make_account
+  post "make_account", to: "make_account#create", as: :make_account_create
+
+  get "login", to: "login#index", as: :login
   get "customer_report" => "customer_report#index"
   get "manage" => "manage#index"
   get "report_completed" => "report_completed#index"
