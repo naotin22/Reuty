@@ -4,7 +4,7 @@ class PutListController < ApplicationController
     @users = User.all
     @products = Product.all
 
-    Product where()
+    Product.where(params[:id])
   end
 end
 

@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get "home" => "home#index"
   get "product_detail/:id", to: "product_detail#show", as: :product_detail
   get "product_detail" => "product_detail#index"
-  get "put_list" => "put_list#index"
+  get "put_list/:id", to: "put_list#index", as: :put_list
+
   get "put_entry" => "put_entry#index"
   get "product_manage" => "product_manage#index"
   get "like" => "like#index"
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   post "make_account", to: "make_account#create", as: :make_account_create
 
   get "login", to: "login#index", as: :login
-  get "customer_report" => "customer_report#index"
+  get "customer_report", to: "customer_report#index", as: :customer_report
   get "manage" => "manage#index"
   get "report_completed" => "report_completed#index"
   get "report_list" => "report_list#index"
