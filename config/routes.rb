@@ -9,12 +9,19 @@ Rails.application.routes.draw do
   resources :products
   resources :purchases
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get "home" => "home#index"
+
+  get "home", to: "home#index", as: :home
   get "product_detail/:id", to: "product_detail#show", as: :product_detail
-  get "product_detail" => "product_detail#index"
+  post "product_question", to: "product_detail#create", as: :product_question_create
+  
   get "put_list/:id", to: "put_list#index", as: :put_list
 
   get "put_entry" => "put_entry#index"
+
+
+  get "purchase_confirmation/:id", to: "purchase_confirmation#index", as: :purchase_confirmation
+  patch "purchase_confirmation/:id", to: "purchase_confirmation#update", as: :purchase_confirmation_update
+  
   get "product_manage" => "product_manage#index"
   get "like" => "like#index"
   # get "like/:id", to: "like#show", as: :like

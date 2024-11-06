@@ -20,22 +20,31 @@
             <div>
                 <%= link_to image_tag("/assets/report.png"), customer_report_path %>
             </div>
+            <h4>商品説明</h4>
             <div>
                 <%= @product.explanation %>
             </div>
             <div>
-                <%= image_tag("/assets/purchases.png") %>
+                &nbsp;
             </div>
             <div>
-                <%=  form_tag("/questions") do %>
-                    <%= hidden_field :comment, :product_id, value: @product.user.id %>
-                    <%= text_field :comment, :comment %>
-                    <%= submit_tag "質問" %>
+                <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
+            </div>
+            <div>
+                <%=  form_with url: product_question_create_path, model: @question do |form| %>
+                    <%= form.hidden_field :user_id %>
+                    <%= form.hidden_field :product_id %>
+                    <%= form.text_field :comment %>
+                    <%= form.submit "質問" %>
                 <% end %>
             </div>
             <div>
-
-            </div>
+                <% @product.questions.each do |question| %>
+                    <div><%= question.comment %></div>
+                    <div><%= question.user.name %></div>
+                    <div><%= question.user.created_at %></div>
+                <% end %>
+            </div> 
         </div>
     </div>
 </div>

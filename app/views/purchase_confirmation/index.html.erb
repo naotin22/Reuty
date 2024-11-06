@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class = "text-center" >
+    <%= link_to "購入を確定する", purchase_confirmation_update_path(@product.id), method: :patch %>
+</h2>
+
+<%= link_to image_tag("/assets/back.png"), product_detail_path(@product.id) %>
+
+
