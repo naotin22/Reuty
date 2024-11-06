@@ -1,10 +1,7 @@
 class PutListController < ApplicationController
 
   def index
-    @users = User.all
-    @products = Product.all
-
-    Product.where(params[:id])
+    @products = Product.where(user_id: current_user.id)
   end
 end
 
