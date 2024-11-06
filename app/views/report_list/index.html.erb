@@ -1,1 +1,5 @@
-<%= @test %>
+<h1>通報一覧</h1>
+<% @reports.each do |report|%>
+    <p><%= report.text %></p>
+　　　 <%= report.name %>
+<% end %>

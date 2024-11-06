@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :purchases
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "home" => "home#index"
-  get "product_detail/:id", to: "product_detail#index", as: :product_detail
+  get "product_detail/:id", to: "product_detail#show", as: :product_detail
   get "product_detail" => "product_detail#index"
   get "put_list" => "put_list#index"
   
@@ -20,9 +20,12 @@ Rails.application.routes.draw do
 
   get "product_manage" => "product_manage#index"
   get "like" => "like#index"
-  get "make_account" => "make_account#index"
-  get "login" => "login#index"
-  get "customer_report" => "customer_report#index"
+
+  get "make_account", to: "make_account#index", as: :make_account
+  post "make_account", to: "make_account#create", as: :make_account_create
+
+  get "login", to: "login#index", as: :login
+  get "customer_report", to: "customer_report#index", as: :customer_report
   get "manage" => "manage#index"
   get "report_completed" => "report_completed#index"
   get "report_list" => "report_list#index"

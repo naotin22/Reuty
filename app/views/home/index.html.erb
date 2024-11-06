@@ -1,56 +1,30 @@
 <p id="notice"><%= notice %></p>
-<thead>
+<div>
   <div>
   </div>
   <div>
-
+      <img src="/assets/famous.png" >
+      <%= link_to image_tag("/assets/sell.png"), put_list_path(@current_user.id) %>
   </div>
-</thead>
+</div>
 <div class="container text-center">
-
-    <% @products.each_slice(4) do |p1, p2, p3, p4| %>
-      <div class="row">
-        <div class="col">
-          <% unless p1.nil? %>
-            <div class="iamge">
-              <% if p1.image.present? %>
-                <%= link_to image_tag p1.image, product_detail_path(product.id) %>
-              <% end %>
-            </div>
-            <%= p1.name %>
-            <%= p1.price %>円
+  <div class="row row-cols-auto">
+    <% @products.each do |p| %>
+      <div class="col-3">
+        <div>
+          <% if p.image.present? %>
+            <%= link_to image_tag p.image, product_detail_path(p.id) %>
+          <% else %>
+            <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(p.id) %>
           <% end %>
         </div>
-        <div class="col">
-          <% if p2 != nil %>
-          <div class="iamge">
-              <%= p2.image %>
-            </div>
-            <%= p2.name %>
-            <%= p2.price %>円
-          <% end %>
+        <div>
+          <%= p.name %>
         </div>
-        <div class="col">
-          <% if p3 != nil %>
-          <div class="iamge">
-              <%= p3.image %>
-            </div>
-            <%= p3.name %>
-            <%= p3.price %>円
-          <% end %>
-        </div>
-        <div class="col">
-          <% if p4 != nil %>
-          <div class="iamge">
-              <%= p4.image %>
-            </div>
-            <%= p4.name %>
-            <%= p4.price %>円
-          <% end %>
+        <div>
+          <%= p.price %>円
         </div>
       </div>
-    
-
-        
     <% end %>
+  </div>
 </div>
