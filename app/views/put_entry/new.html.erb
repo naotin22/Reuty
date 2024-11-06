@@ -1,0 +1,23 @@
+<h1>出品登録</h1>
+
+<%= form_with url: put_entry_create_path, model: @product do |form| %>
+
+    画像
+    <%= form.file_field :image %>
+
+    商品名
+    <%= form.text_field :name %>
+
+    価格
+    <%= form.text_field :price %>
+
+    商品種別
+    <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
+
+    商品の説明
+    <%= form.text_area :explanation %>
+
+    <%= form.submit "出品" %>
+
+<% end %>
+
