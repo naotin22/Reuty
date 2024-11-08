@@ -46,7 +46,7 @@ class PutEntryController < ApplicationController
     end
 
     if @product.update(product_params)
-      redirect_to put_list_path(user.id)
+      redirect_to put_list_path(@product.user.id)
     else
       render :edit
     end
