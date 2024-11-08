@@ -18,7 +18,7 @@
         </div>
         <div class="col">
             <div>
-                <%= image_tag("/assets/report.png") %>
+                <%= link_to image_tag("/assets/report.png"), customer_report_path(@product.id) %>
             </div>
             <h4>商品説明</h4>
             <div>
