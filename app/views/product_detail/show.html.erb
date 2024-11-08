@@ -3,7 +3,9 @@
     <div class="row">
         <div class="col">
             <div>
-                <%= @product.user.image %>
+                <% if @product.user.image.present? %>
+                    <%= image_tag "#{@product.user.image}", {class: "img-fluid"} %>
+                <% end %>
                 <%= @product.user.name %>
             </div>
             <div>
@@ -11,27 +13,27 @@
                     <%= image_tag "product/#{@product.image}", {class: "img-fluid"} %>
                 <% end %>
             </div>
-            <div>
+            <h4>
                 <%= @product.name %>
-            </div>
-            <div>
+            </h4>
+            <h4>
                 ￥<%= @product.price %>
-            </div>
+            </h4>
         </div>
         <div class="col">
             <div>
                 <%= link_to image_tag("/assets/report.png"), customer_report_path(@product.id) %>
             </div>
+            <div>&nbsp;</div>
             <h4>商品説明</h4>
             <div>
                 <%= @product.explanation %>
             </div>
-            <div>
-                &nbsp;
-            </div>
+            <div>&nbsp;</div>
             <div>
                 <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
             </div>
+            <div>&nbsp;</div>
             <div>
                 <%=  form_with url: product_question_create_path, model: @question do |form| %>
                     <%= form.hidden_field :user_id %>
