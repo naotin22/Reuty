@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 u1 = User.create(name: "佐藤", password: "satou", mail: "satou@xxxx", address:"出雲市ｘｘ町")
-u2 = User.create(name: "らいき", password: "satou", mail: "satou@xxxx", address:"出雲市ｘｘ町")
-u3 = User.create(name: "ｋｋ", password: "satou", mail: "satou@xxxx", address:"出雲市ｘｘ町")
+u2 = User.create(name: "らいき", password: "raiki", mail: "raiki@xxxx", address:"出雲市ｘｘ町")
+u3 = User.create(name: "ｋｋ", password: "kk", mail: "kk@xxxx", address:"出雲市ｘｘ町")
 
 pc1 = ProductClass.create(name: "制服")
 pc2 = ProductClass.create(name: "教科書")

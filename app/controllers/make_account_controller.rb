@@ -25,7 +25,7 @@ class MakeAccountController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :password, :email, :address)
+    params.require(:user).permit(:name, :password, :mail, :address)
   end
 
 end
