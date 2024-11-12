@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get "manage" => "manage#index"
   get "product_manage" => "product_manage#index"
   get "report_list" => "report_list#index"
+  post "report_list", to: "report_list#create", as: :report_list_create 
   get "seller_info" => "seller_info#index"
 
 end
