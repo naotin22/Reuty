@@ -1,40 +1,41 @@
 <p id="notice"><%= notice %></p>
-<div class="container text-center">
+<div class="container">
     <div class="row">
         <div class="col">
             <div>
                 <% if @product.user.image.present? %>
                     <%= image_tag "#{@product.user.image}", {class: "img-fluid"} %>
                 <% end %>
-                <%= @product.user.name %>
+                <h4><%= @product.user.name %></h4>
             </div>
             <div>
                 <% if @product.image.present? %>
                     <%= image_tag "product/#{@product.image}", {class: "img-fluid"} %>
                 <% end %>
             </div>
-            <h4>
-                <%= @product.name %>
-            </h4>
-            <h4>
-                ￥<%= @product.price %>
-            </h4>
+            <div class="text-center">
+                <h4><%= @product.name %></h4>
+            </div>
+            <div class="text-center">
+                <h4>￥<%= @product.price %></h4>
+            </div>
+            <%= link_to image_tag("/assets/back.png"), home_path %>
         </div>
         <div class="col">
-            <div>
+            <div class="text-center">
                 <%= link_to image_tag("/assets/report.png"), customer_report_path(@product.id) %>
             </div>
             <div>&nbsp;</div>
-            <h4>商品説明</h4>
-            <div>
+            <div class="card border-dark"> 
+                <h4>商品説明</h4>
                 <%= @product.explanation %>
             </div>
             <div>&nbsp;</div>
-            <div>
+            <div class="text-center">
                 <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
             </div>
             <div>&nbsp;</div>
-            <div>
+            <div class="text-center">
                 <%=  form_with url: product_question_create_path, model: @question do |form| %>
                     <%= form.hidden_field :user_id %>
                     <%= form.hidden_field :product_id %>
@@ -42,7 +43,7 @@
                     <%= form.submit "質問" %>
                 <% end %>
             </div>
-            <div>
+            <div class="text-center">
                 <% @product.questions.each do |question| %>
                     <div><%= question.comment %></div>
                     <div><%= question.user.name %></div>

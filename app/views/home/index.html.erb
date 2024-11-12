@@ -13,13 +13,22 @@
       <div class="col-3">
         <div>
           <% if p.sale == "売り切れ" %>
-            <%= image_tag("/assets/sould out.png") %>
+            <div class="card text-bg-dark">
+              <div class="img-container">
+                <%= image_tag("/assets/product/#{p.image}") %>
+              </div>
+              <div class="card-img-overlay img-souldout">
+                <%= image_tag("/assets/sould out.png") %>
+              </div>
+            </div>
           <% else %>
-            <% if p.image.present? %>
-              <%= link_to image_tag("/assets/product/#{p.image}"), product_detail_path(p.id) %>
-            <% else %>
-              <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(p.id) %>
-            <% end %>
+            <div class="img-container">
+              <% if p.image.present? %>
+                <%= link_to image_tag("/assets/product/#{p.image}"), product_detail_path(p.id) %>
+              <% else %>
+                <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(p.id) %>
+              <% end %>
+            </div>
           <% end %>
         </div>
         <div>
