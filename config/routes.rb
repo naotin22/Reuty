@@ -37,8 +37,10 @@ Rails.application.routes.draw do
   delete "put_entry/:product_id", to: "put_entry#destroy", as: :put_entry_destroy
 
   # お気に入り
-  get "like" => "like#index"
-  
+  get "like", to: "like#index", as: :like
+  post "like/:product_id", to: "like#create", as: :like_create
+  delete "like/:id", to: "like#destroy", as: :like_destroy
+
   # 通報
   get "customer_report", to: "customer_report#index", as: :customer_report
   get "report_completed" => "report_completed#index"

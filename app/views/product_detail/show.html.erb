@@ -19,10 +19,11 @@
             <div class="text-center">
                 <h4>￥<%= @product.price %></h4>
             </div>
-            <%= link_to image_tag("/assets/back.png"), home_path %>
+            <%= link_to image_tag("/assets/back.png"), home_path, method: :get %>
         </div>
         <div class="col">
             <div class="text-center">
+                <%= link_to image_tag("/assets/detail_famous.png"), like_create_path(@product.id), {method: "post"} %>
                 <%= link_to image_tag("/assets/report.png"), customer_report_path(@product.id) %>
             </div>
             <div>&nbsp;</div>
@@ -32,6 +33,7 @@
             </div>
             <div>&nbsp;</div>
             <div class="text-center">
+                
                 <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
             </div>
             <div>&nbsp;</div>
