@@ -1,34 +1,52 @@
 <h1>編集</h1>
 
 <%= form_with url: put_entry_update_path(@product.id), model: @product do |form| %>
+<div class = "row mb">
+    <div width="10px">
+        <% if @product.image.present? %>
+            <%= image_tag "product/#{@product.image}"%>
+        <% end %>
+    </div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div>
+            画像
+            <%= form.file_field :image %>
+            </div>
 
-    <% if @product.image.present? %>
-        <%= image_tag "product/#{@product.image}" %>
-    <% end %>
+            <div>
+            商品名
+            <%= form.text_field :name %>
+            </div>
 
-    画像
-    <%= form.file_field :image %>
+            <div>
+            価格
+            <%= form.text_field :price %>
+            </div>
 
-    商品名
-    <%= form.text_field :name %>
+            <div>
+            商品種別
+            <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
+            </div>
+        </div>
+        <div class="col">
+            商品の説明
+            <%= form.text_area :explanation %>
 
-    価格
-    <%= form.text_field :price %>
+            <%= form.submit "更新する" %>
+        </div>
 
-    商品種別
-    <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
-
-    商品の説明
-    <%= form.text_area :explanation %>
-
-    <%= form.submit "更新する" %>
-
+    </div>
+</div>
 <% end %>
 
 
 
 
+<div>
+    <%= link_to image_tag("/assets/back.png"), put_list_path(@product.id)%>
+</div>
 
 
 
-<a href= 'http://localhost:3000/put_list'>戻る</a>

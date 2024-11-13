@@ -1,23 +1,35 @@
 <h1>出品登録</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-9">Contents</div>
+            <div>
+                <%= form_with url: put_entry_create_path, model: @product do |form| %>
 
-<%= form_with url: put_entry_create_path, model: @product do |form| %>
+                    画像
+                    <%= form.file_field :image %>
 
-    画像
-    <%= form.file_field :image %>
+                    商品名
+                    <%= form.text_field :name %>
 
-    商品名
-    <%= form.text_field :name %>
+                    価格
+                    <%= form.text_field :price %>
 
-    価格
-    <%= form.text_field :price %>
+                    商品種別
+                    <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
+            <div class="col-3">Side navi</div>
+                    商品の説明
+                    <%= form.text_area :explanation %>
 
-    商品種別
-    <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
+                    <%= form.submit "出品" %>
 
-    商品の説明
-    <%= form.text_area :explanation %>
+                <% end %>
 
-    <%= form.submit "出品" %>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <%= link_to image_tag("/assets/back.png"), put_list_path(@current_user_id) %>
+</div>
 
-<% end %>
 
