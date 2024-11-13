@@ -29,7 +29,6 @@ Rails.application.routes.draw do
 
   # 出品関連
   get "put_list/:id", to: "put_list#index", as: :put_list
-  get "put_entry" => "put_entry#index"
   get "put_entry", to: "put_entry#new", as: :put_entry_new
   post "put_entry", to: "put_entry#create", as: :put_entry_create
   get "put_entry/:product_id", to: "put_entry#edit", as: :put_entry_edit
