@@ -10,10 +10,11 @@
 </ul>
 
 
-
-
-<a href= 'http://localhost:3000/report_completed'>報告</a>
-<p><a href= 'http://localhost:3000/product_detail'>戻る</a></p>
 <% end %>
+<div>
+    <%= link_to image_tag("/assets/back.png"), product_detail_path(@current_user_id) %>
+</div>
 
-
+<div>
+    <%= link_to image_tag("/assets/report_comp.png"), product_detail_path(@current_user_id) %>
+</div>
