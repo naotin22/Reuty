@@ -3,6 +3,7 @@ class PutEntryController < ApplicationController
   def new
     @product = Product.new
     @product_classes = ProductClass.all
+    @current_user_id = current_user.id
   end
 
   def create
