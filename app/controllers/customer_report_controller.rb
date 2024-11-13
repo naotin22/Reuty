@@ -1,6 +1,6 @@
 class CustomerReportController < ApplicationController
 
   def index
-    @test = "てすと"
+    @current_user_id = current_user.id
   end
 end
