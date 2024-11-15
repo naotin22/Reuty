@@ -24,7 +24,7 @@
         </td>
         <td><h4><%= favorite.product.name %><h4></td>
         <td><h4>￥<%= favorite.product.price %><h4></td>
-        <td><%= link_to '削除', like_destroy_path(favorite.product_id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
