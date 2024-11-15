@@ -41,9 +41,9 @@ Rails.application.routes.draw do
   delete "like/:id", to: "like#destroy", as: :like_destroy
 
   # 通報
-  get "customer_report", to: "customer_report#index", as: :customer_report
+  get "customer_report/:product_id", to: "customer_report#new", as: :customer_report_new
   post "customer_report", to: "customer_report#create", as: :customer_report_create
-  get "report_completed" => "report_completed#index"
+  get "report_completed" => "report_completed#index", as: :report_completed
 
   #---管理者機能 ----
   get "manage" => "manage#index"
