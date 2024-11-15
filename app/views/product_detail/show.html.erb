@@ -24,7 +24,7 @@
         <div class="col">
             <div class="text-center">
                 <%= link_to image_tag("/assets/detail_famous.png"), like_create_path(@product.id), {method: "post"} %>
-                <%= link_to image_tag("/assets/report.png"), customer_report_path(@product.id) %>
+                <%= link_to image_tag("/assets/report.png"), customer_report_new_path(@product.id) %>
             </div>
             <div>&nbsp;</div>
             <div class="card border-dark"> 
