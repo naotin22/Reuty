@@ -1,5 +1,20 @@
 <h1>通報一覧</h1>
-<% @reports.each do |report|%>
-    <p><%= report.text %></p>
-    <%= report.name %>
-<% end %>
+<table>
+    <thead>
+        <tr>
+            <th>通報者</th>
+            <th>商品名</th>
+            <th>出品者</th>
+            <th>通報コメント</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @reports.each do |report|%>
+            <tr>
+                <td><%= report.user.name %></td>
+                <td><%= report.product.name %></td>
+                <td><%= report.product.user.name %></td>
+                <td><%= report.report_comment %></td>
+            </tr> 
+        <% end %>
