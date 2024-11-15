@@ -4,3 +4,4 @@ class ReportCompletedController < ApplicationController
     @test = "てすと"
   end
 end
+
