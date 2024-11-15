@@ -14,6 +14,7 @@
   <tbody>
     <% @favorites.each do |favorite| %>
       <tr>
+        <td><%= favorite.id %></td>
         <td><%= favorite.product_id %></td>
         <td><%= favorite.user_id %></td>
         <td><%= link_to 'Show', favorite %></td>
