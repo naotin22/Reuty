@@ -31,10 +31,9 @@
                     <td><%= link_to '編集', put_entry_edit_path(product.id) %></td>
                     <td><%= link_to '削除', put_entry_destroy_path(product.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 </tr>
-            </div>
-        </div>
         <% end %>
     </tbody>
+</table>
 
 <div>
     <%= link_to image_tag("/assets/back.png"), home_path %>
