@@ -1,7 +1,7 @@
 <h1>出品登録</h1>
 <div class="container">
 	<div class="row">
-		<div class="col-9">Contents</div>
+		<div class="col-9">
             <div>
                 <%= form_with url: put_entry_create_path, model: @product do |form| %>
 
@@ -16,12 +16,12 @@
 
                     商品種別
                     <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
-            <div class="col-3">Side navi</div>
-                    商品の説明
-                    <%= form.text_area :explanation %>
+                    <div class="col-3">
+                        商品の説明
+                        <%= form.text_area :explanation %>
 
-                    <%= form.submit "出品" %>
-
+                        <%= form.submit "出品" %>
+                    </div>
                 <% end %>
 
             </div>
