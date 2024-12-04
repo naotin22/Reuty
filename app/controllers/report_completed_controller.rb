@@ -1,7 +1,7 @@
 class ReportCompletedController < ApplicationController
 
   def index
-    @test = "てすと"
+    @product_id = params[:product_id]
   end
 end
 

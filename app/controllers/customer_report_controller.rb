@@ -22,7 +22,7 @@ class CustomerReportController < ApplicationController
       @report.save
     end
 
-    redirect_to report_completed_path
+    redirect_to report_completed_path(@report.product_id)
   end
 
 end
