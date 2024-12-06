@@ -23,3 +23,7 @@
   width: 100%;
   padding-top:30%;
 }
+.img-star img {
+  width: 30%;
+  float: left;
+}
