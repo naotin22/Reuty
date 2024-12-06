@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_15_060648) do
+ActiveRecord::Schema.define(version: 2024_12_04_030428) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "product_id"
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(version: 2024_10_15_060648) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "manage_flag"
+    t.boolean "stop_flag"
   end
 
 end
