@@ -1,4 +1,4 @@
-class PutListController < ApplicationController
+class ManageController < ApplicationController
 
   def index
     @test = "てすと"
