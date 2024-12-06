@@ -1,7 +1,7 @@
 class ProductManageController < ApplicationController
   
   def index
-    @test = "てすと"
+    @products = Product.all
   end
 
 end
