@@ -37,8 +37,11 @@
             </div>
             <div>&nbsp;</div>
             <div class="text-center">
-                
-                <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
+                <% if not @question.user_id == @product.user.id %>
+                    <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
+                <% else %>
+                    <%= image_tag("/assets/purchases.png") %>
+                <% end %>
             </div>
             <div>&nbsp;</div>
             <div class="text-center">
