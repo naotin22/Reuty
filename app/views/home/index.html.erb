@@ -22,35 +22,27 @@
               </div>
             </div>
           <% else %>
-            <% if p.favorite?(@current_user.id) %>
-            <div class="card text-bg-dark">
-              <div class="card img-container">
-                <% if p.image.present? %>
-                  <%= link_to image_tag("/assets/product/#{p.image}"), product_detail_path(p.id) %>
-                <% else %>
-                  <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(p.id) %>
-                <% end %>
-              </div>
-              <div class="card-img-overlay img-star">
-                <%= link_to image_tag("/assets/star.png"), product_detail_path(p.id) %>
-              </div>
-            </div>  
-            <% else%>
-              <div class="card img-container border-dark mb-3">
-                <% if p.image.present? %>
-                  <%= link_to image_tag("/assets/product/#{p.image}"), product_detail_path(p.id) %>
-                <% else %>
-                  <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(p.id) %>
-                <% end %>
-              </div>
-            <% end %>
+            <div class="card img-container border-dark mb-3">
+              <% if p.image.present? %>
+                <%= link_to image_tag("/assets/product/#{p.image}"), product_detail_path(p.id) %>
+              <% else %>
+                <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(p.id) %>
+              <% end %>
+            </div>
           <% end %>
         </div>
-        <div>
-          <%= p.name %>
-        </div>
-        <div>
-          <%= p.price %>円
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <div><%= p.name %></div>
+              <div><%= p.price %>円</div>
+            </div>
+            <% if p.favorite?(@current_user.id) %>
+            <div class="col img-star">
+              <%= image_tag("/assets/star.png") %>
+            </div>
+            <% end %>
+          </div>
         </div>
       </div>
     <% end %>
