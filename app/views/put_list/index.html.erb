@@ -1,15 +1,15 @@
-<div class="card bg-dark">
-    <div class="card-header text-white">
+
+<div class="card bg-white">
+    <div class="card-header text-dark">
         <h1>出品一覧</h1>
+    </div>
+        <%= link_to image_tag("/assets/back.png"), home_path %>
+    </div>
+    <div class="text-end">
+    <%= link_to image_tag("/assets/put_entry.png"), put_entry_new_path %>
     </div>
 </div>
 
-
-
-
-<div>
-    <%= link_to image_tag("/assets/put_entry.png"), put_entry_new_path %>
-</div>
 
 <table>
     <thead>
@@ -56,3 +56,5 @@
         </div>
     </div>
 </footer>
+
+
