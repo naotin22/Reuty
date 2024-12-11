@@ -1,20 +1,25 @@
 <h1>通報一覧</h1>
-<table>
-    <thead>
-        <tr>
-            <th>通報者</th>
-            <th>商品名</th>
-            <th>出品者</th>
-            <th>通報コメント</th>
-        </tr>
-    </thead>
 
-    <tbody>
-        <% @reports.each do |report|%>
-            <tr>
-                <td><%= report.user.name %></td>
-                <td><%= report.product.name %></td>
-                <td><%= report.product.user.name %></td>
-                <td><%= report.report_comment %></td>
-            </tr> 
-        <% end %>
+<div class="container">
+    <div class="row">
+        <div class="col">通報者</div>
+        <div class="col">商品名</div>
+        <div class="col">出品者</div>
+        <div class="col">通報コメント</div>
+    </div>
+
+    <% @reports.keys.each do | key | %>
+        <div class="row">
+            <% @reports[key].each_with_index do |report, index| %>
+                <% if index == 0 %>
+                    <div class="col"><%= report.user.name %></div>
+                    <div class="col"><%= report.product.name  %></div>
+                    <div class="col"><%= report.product.user.name  %></div>
+                    <div class="col">
+                <% end%>
+                <div class="row"><%= report.report_comment %></div>
+            <% end %>
+            </div> <!-- colの閉じ -->
+        </div>
+    <% end %>
+</div>

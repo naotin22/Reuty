@@ -1,18 +1,7 @@
 class ReportListController < ApplicationController
   
   def index
-    # @reports = Report.all
-    @reports= Report.order(:user_id, :product_id)
+    @reports = Report.order(:product_id, :user_id).group_by { |report| "#{report.product_id}_#{report.user_id}" }
   end
-  def create
-    @reports = Report.all
-    report_list = Report.find_by(user_id: @reports.comment)
-
-    
-
-  end  
-
-
-
-
+  
 end

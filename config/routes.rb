@@ -51,7 +51,6 @@ Rails.application.routes.draw do
   get "product_manage", to:"product_manage#index", as: :product_manage
   
   get "report_list", to:"report_list#index", as: :report_list
-  post "report_list", to: "report_list#create", as: :report_list_create 
   
   get "seller_info", to:"seller_info#index", as: :seller_info
   patch "seller_info/:user_id", to: "seller_info#update", as: :seller_info_update
