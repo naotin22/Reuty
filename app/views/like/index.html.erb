@@ -2,7 +2,7 @@
 
 <h2>お気に入り一覧</h2>
 
-<table>
+<table class="block">
   <thead>
     <tr>
       <th>商品画像</th>
@@ -13,20 +13,24 @@
   </thead>
 
   <tbody>
+    <div class="note">
     <% @favorites.each do |favorite| %>
       <tr>
         <td>
-          <% if favorite.product.image.present? %>
-              <%= link_to image_tag("/assets/product/#{favorite.product.image}") %>
-            <% else %>
-              <%= link_to image_tag("/assets/product/sample.jfif") %>
-            <% end %>
+          <div class="img-list">
+              <% if favorite.product.image.present? %>
+                <%= link_to image_tag("/assets/product/#{favorite.product.image}"), product_detail_path(favorite.product.id) %>
+              <% else %>
+                <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(favorite.product.id) %>
+              <% end %>
+            </div>
         </td>
         <td><h4><%= favorite.product.name %><h4></td>
         <td><h4>￥<%= favorite.product.price %><h4></td>
         <td><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    </div>
   </tbody>
 </table>
 <%= link_to image_tag("/assets/back.png"), home_path %>

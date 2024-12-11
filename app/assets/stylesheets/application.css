@@ -32,3 +32,23 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+/* 一覧 */
+.block {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+}
+.note {
+  width: 100%;
+/*  ここから */
+  line-height: 3;
+  background-image: linear-gradient(#ccc 1px, transparent 1px);
+  background-size: 100% 3em;
+  padding-bottom: 1px;
+/*  ここまで */
+}
+.img-list img {
+  height: 20%;
+  object-fit: cover;
+}
