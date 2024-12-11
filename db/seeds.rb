@@ -9,6 +9,10 @@
 u1 = User.create(name: "佐藤", password: "satou", mail: "satou@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
 u2 = User.create(name: "らいき", password: "raiki", mail: "raiki@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
 u3 = User.create(name: "ｋｋ", password: "kk", mail: "kk@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
+# 管理者
+u4 = User.create(name: "みさき", password: "misaki", mail: "misaki@xxxx", address:"出雲市ｘｘ町", manage_flag:true, stop_flag:false)
+# 停止された人
+u5 = User.create(name: "かわせ", password: "kawase", mail: "kawase@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:true)
 
 pc1 = ProductClass.create(name: "制服")
 pc2 = ProductClass.create(name: "教科書")
