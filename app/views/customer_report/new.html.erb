@@ -1,23 +1,32 @@
-<h1>通報</h1>
-<div container text-center>
-    <div class="row">
+<h1 class="text-center">通報</h1>
+
+
         <%= @product.name %>
         <%= @product.user.name %>
-        <%= form_with url: customer_report_create_path, method: :post do |form| %>
-            <%= hidden_field_tag :product_id, @product.id %>
-            <% @report_classes.each do |report_class| %>
-                <div class="col">
-                    <%= form.check_box :report_comment, {multiple: true}, report_class.comment, nil %>
-                    <%= form.label :report_comment, report_class.comment %>
-                </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <%= form_with url: customer_report_create_path, method: :post do |form| %>
+                <%= hidden_field_tag :product_id, @product.id %>
+                <% @report_classes.each do |report_class| %>
+                    <div class="row">
+                        <div class="col">
+                            <%= form.check_box :report_comment, {multiple: true}, report_class.comment, nil %>
+                            <%= form.label :report_comment, report_class.comment %>
+                        </div>
+                    </div>
+                <% end %>
+                    <div class="row">
+                        <div class="col">
+                            <%= form.check_box :other, {}, 1, nil %>
+                            <%= form.label :other, "その他" %>
+                            <%= form.text_field :other_comment %>
+                        </div class="grid gap-0 row-gap-3">
+                        <div class="p-2 g-col-6">
+                            <%= form.submit "登録" %>
+                        </div>
+                    </div>
             <% end %>
-            <div class="col">
-                <%= form.check_box :other, {}, 1, nil %>
-                <%= form.label :other, "その他" %>
-                <%= form.text_field :other_comment %>
-            </div>
-            <%= form.submit "登録" %>
-        <% end %>
+        </div>
     </div>
 </div>
 
