@@ -5,6 +5,8 @@
             <div>
                 <% if @product.user.image.present? %>
                     <div class="img-profile"><%= image_tag "profile/#{@product.user.image}", {class: "img-fluid"} %></div>
+                <% else %>
+                    <div class="img-profile"><%= image_tag "profile/aicon.png", {class: "img-fluid"} %></div>
                 <% end %>
                 <h4><%= @product.user.name %></h4>
             </div>
