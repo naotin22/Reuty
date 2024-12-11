@@ -4,7 +4,7 @@
         <div class="col">
             <div>
                 <% if @product.user.image.present? %>
-                    <%= image_tag "#{@product.user.image}", {class: "img-fluid"} %>
+                    <div class="img-profile"><%= image_tag "profile/#{@product.user.image}", {class: "img-fluid"} %></div>
                 <% end %>
                 <h4><%= @product.user.name %></h4>
             </div>
@@ -37,8 +37,11 @@
             </div>
             <div>&nbsp;</div>
             <div class="text-center">
-                
-                <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
+                <% if not @question.user_id == @product.user.id %>
+                    <%= link_to image_tag("/assets/purchases.png"), purchase_confirmation_path %>
+                <% else %>
+                    <%= image_tag("/assets/purchases.png") %>
+                <% end %>
             </div>
             <div>&nbsp;</div>
             <div class="text-center">

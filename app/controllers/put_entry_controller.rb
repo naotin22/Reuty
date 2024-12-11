@@ -20,7 +20,7 @@ class PutEntryController < ApplicationController
     end
 
     if @product.save
-      redirect_to put_list_path
+      redirect_to put_list_path(@product.user.id)
     else
       render :new
     end
@@ -58,7 +58,7 @@ class PutEntryController < ApplicationController
     @product = Product.find(product_id)
     @product.destroy
 
-    redirect_to put_list_path
+    redirect_to put_list_path(@product.user.id)
   end
 
   private

@@ -1,14 +1,23 @@
-<%= @test %>
 
-
-<div>
-    <%= link_to image_tag("/assets/report_list.png"), report_list_path %>
+<div class="grid gap-0 row-gap-3">
+    <div class="bg-img d-flex justify-content-center align-items-center mb-5">
+        <div class = "row mb-3">  
+            <div class="p-2 g-col-6">
+                <div class="d-flex justify-content-center">
+                    <%= link_to image_tag("/assets/report_list.png"), report_list_path %>
+                </div>
+            </div>
+            <div class="p-2 g-col-6">
+                <div class="d-flex justify-content-center">
+                    <%= link_to image_tag("/assets/product_manage.png"), product_manage_path %>
+                </div>
+            </div>
+            <div class="p-2 g-col-6">
+                <div class="d-flex justify-content-center">
+                    <%= link_to image_tag("/assets/seller_info.png"), seller_info_path %>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div>
-    <%= link_to image_tag("/assets/product_manage.png"), product_manage_path %>
-</div>
-
-<div>
-    <%= link_to image_tag("/assets/seller_info.png"), seller_info_path %>
-</div>
