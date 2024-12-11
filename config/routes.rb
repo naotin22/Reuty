@@ -47,12 +47,13 @@ Rails.application.routes.draw do
 
   #---管理者機能 ----
   get "manage", to: "manage#index", as: :manage
-  get "report_list", to:"report_list#index", as: :report_list
+  
   get "product_manage", to:"product_manage#index", as: :product_manage
-  get "seller_info", to:"seller_info#index", as: :seller_info
-  get "report_list" => "report_list#index"
+  
+  get "report_list", to:"report_list#index", as: :report_list
   post "report_list", to: "report_list#create", as: :report_list_create 
-  get "seller_info" => "seller_info#index"
-  post "seller_info", to: "seller_info#create", as: :seller_info_create
+  
+  get "seller_info", to:"seller_info#index", as: :seller_info
+  patch "seller_info/:user_id", to: "seller_info#update", as: :seller_info_update
 
 end

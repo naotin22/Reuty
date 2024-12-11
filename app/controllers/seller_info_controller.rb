@@ -5,8 +5,12 @@ class SellerInfoController < ApplicationController
     @users = User.where(id: user_ids).order(:user_id)
   end
 
-  def create
-    @products = Product.all
+  def update
+    @user = User.find(params[:user_id])
+    @user.stop_flag = !@user.stop_flag
+    @user.save
+
+    redirect_to seller_info_path
   end
 
 end
