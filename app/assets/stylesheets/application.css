@@ -13,12 +13,12 @@
  *= require_tree .
  *= require_self
  */
+/* ホーム */
 .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .img-souldout img {
   width: 100%;
   padding-top:30%;
@@ -26,6 +26,9 @@
 .img-star img {
   width: 40%;
 }
+/* 商品詳細 */
 .img-profile img{
   width: 20%;
+  border-radius: 50%;
+  object-fit: cover;
 }
