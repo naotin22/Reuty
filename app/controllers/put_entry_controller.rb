@@ -7,6 +7,8 @@ class PutEntryController < ApplicationController
   end
 
   def create
+    @product_classes = ProductClass.all
+    @current_user_id = current_user.id
     @product = Product.new(product_params)
     @product.user_id = current_user.id
     @product.sale = "販売中"
@@ -34,6 +36,7 @@ class PutEntryController < ApplicationController
 
   def update
     product_id = params[:product_id]
+    @product_classes = ProductClass.all
     @product = Product.find(product_id)
     @product.user_id = current_user.id
     @product.sale = "販売中"
