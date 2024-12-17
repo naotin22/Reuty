@@ -11,9 +11,9 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :explanation, presence: true
 
-  # def favorite?(user_id)
-  #   self.favorites.where(user_id: user_id).any?
-  # end
+  def favorite?(user_id)
+    self.favorites.where(user_id: user_id).any?
+  end
 
 
   validate :add_error_sample
