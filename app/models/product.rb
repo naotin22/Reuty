@@ -16,27 +16,6 @@ class Product < ApplicationRecord
   end
 
 
-  validate :add_error_sample
-  
-  def add_error_sample
-    if image.blank?
-      errors[:base] << "画像を挿入して下さい"
-    end
-
-    if name.blank?
-      errors[:base] << "商品名を入力して下さい"
-    end
-
-    if price.blank?
-      errors[:base] << "価格を入力して下さい"
-    end
-
-    if explanation.blank?
-      errors[:base] << "商品説明を入力して下さい"
-    end
-
-  end
-  
 end
 
 
