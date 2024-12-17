@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
-
-<h2>お気に入り一覧</h2>
-
-<table class="block">
+<div class="sticky-top text-bg-dark bg-gradient  shadow-sm d-flex align-items-center" style="height:50px;">
+  <div class="container">
+    <div class="row">
+      <h2 class="col">お気に入り一覧</h2>
+      <div class="col"><%= link_to image_tag("/assets/back.png"), home_path %></div>
+    </div>
+  </div>
+</div>
+<table class="table table-sm">
   <thead>
     <tr>
-      <th>商品画像</th>
-      <th>商品名</th>
-      <th>価格</th>
+      <th><h4>商品画像</h4></th>
+      <th><h4>商品名</h4></th>
+      <th><h4>価格</h4></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
-    <div class="note">
+  <tbody class="table-group-divider">
+    
     <% @favorites.each do |favorite| %>
       <tr>
         <td>
@@ -23,14 +28,14 @@
               <% else %>
                 <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(favorite.product.id) %>
               <% end %>
-            </div>
+          </div>
         </td>
-        <td><h4><%= favorite.product.name %><h4></td>
-        <td><h4>￥<%= favorite.product.price %><h4></td>
-        <td><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><h4><div class="text-list"><%= favorite.product.name %></div><h4></td>
+        <td><h4><div class="text-list">￥<%= favorite.product.price %></div><h4></td>
+        <td><h4><div class="text-list"><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></div></h4></td>
       </tr>
     <% end %>
-    </div>
   </tbody>
 </table>
+
 <%= link_to image_tag("/assets/back.png"), home_path %>
