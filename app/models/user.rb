@@ -5,9 +5,9 @@ class User < ApplicationRecord
   has_many :purchases
   has_many :reports
 
-  validates :name, presence: {message:"名前が入力されていません"}
-  validates :password, presence: {message:"パスワードが入力されていません"}
-  validates :mail, presence: {message:"メールアドレスが入力されていません"}
+  validates :name, presence: true
+  validates :password, presence: true
+  validates :mail, presence: true
   validates :mail, uniqueness: { scope: :mail, message:"このメールアドレスは既に登録されています" }
-  validates :address, presence: {message:"住所が入力されていません"}
+  validates :address, presence: true
 end
