@@ -3,16 +3,16 @@
   <div class="container">
     <div class="row">
       <h2 class="col">お気に入り一覧</h2>
-      <div class="col"><%= link_to image_tag("/assets/back.png"), home_path %></div>
+      <div class="col back"><%= link_to image_tag("/assets/back(2).png"), home_path %></div>
     </div>
   </div>
 </div>
 <table class="table table-sm">
   <thead>
     <tr>
-      <th><h4>商品画像</h4></th>
-      <th><h4>商品名</h4></th>
-      <th><h4>価格</h4></th>
+      <th>&nbsp;</th>
+      <th><h3>商品名</h3></th>
+      <th><h3>価格</h3></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,12 +30,10 @@
               <% end %>
           </div>
         </td>
-        <td><h4><div class="text-list"><%= favorite.product.name %></div><h4></td>
-        <td><h4><div class="text-list">￥<%= favorite.product.price %></div><h4></td>
-        <td><h4><div class="text-list"><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></div></h4></td>
+        <td class="text-list"><h3><%= favorite.product.name %><h3></td>
+        <td class="text-list"><h3>￥<%= favorite.product.price %><h3></td>
+        <td class="text-list"><h3><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></h3></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to image_tag("/assets/back.png"), home_path %>

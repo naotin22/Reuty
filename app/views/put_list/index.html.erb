@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row">
             <h2 class="col">出品一覧</h2>
+            <div class="col back"><%= link_to image_tag("/assets/back(2).png"), home_path %></div>
         </div>
     </div>
 </div>
@@ -14,28 +15,29 @@
 <table class="table table-sm">
     <thead>
         <tr>
-            <th><h4>&nbsp;</h4></th>
-            <th><h4>商品名</h4></th>
-            <th><h4>価格</h4></th>
-            <th><h4>&nbsp;</h4></th>
-            <th><h4>&nbsp;</h4></th>                        
+            <th>&nbsp;</th>
+            <th><h3>商品名</h3></th>
+            <th><h3>価格</h3></th>
+            <th><h3>&nbsp;</h3></th>
+            <th><h3>&nbsp;</h3></th>                        
             <th colspan="3"></th>
         </tr>
     </thead>
 
     
-    <tbody>
+    <tbody class="table-group-divider">
         <% @products.each do |product| %>
                 <tr>
-                    <td width="200px">
+                    <td>
+                        <div class="img-list">
                         <% if product.image.present? %>
                             <%= image_tag "product/#{product.image}", {class: "img-fluid"} %>
                         <% end %>
                     </td>
-                    <td width="200px"><%= product.name %></td>
-                    <td width="100px"><%= product.price %></td>
-                    <td><%= link_to '編集', put_entry_edit_path(product.id) %></td>
-                    <td><%= link_to '削除', put_entry_destroy_path(product.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <td class="text-list"><h3><%= product.name %><h3></td>
+                    <td class="text-list"><h3><%= product.price %><h3></td>
+                    <td class="text-list"><h3><%= link_to '編集', put_entry_edit_path(product.id) %><h3></td>
+                    <td class="text-list"><h3><%= link_to '削除', put_entry_destroy_path(product.id), method: :delete, data: { confirm: 'Are you sure?' } %></h3></td>
                 </tr>
         <% end %>
     </tbody>
