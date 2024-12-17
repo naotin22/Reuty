@@ -11,9 +11,9 @@
                 <%= hidden_field_tag :product_id, @product.id %>
                 <div class="row row-cols-auto">
                 <% @report_classes.each do |report_class| %>
-                    <div class="col-5">
+                    <div class="col-13">
                     <div class="row">
-                        <div class="display-6">
+                        <div class="h3">
                             <div class="col">
                                 <%= form.check_box :report_comment, {multiple: true}, report_class.comment, nil %>
                                 <%= form.label :report_comment, report_class.comment %>
@@ -23,7 +23,7 @@
                     </div>
                 <% end %>
                 </div>
-                    <div class="row">
+                    <div class="h3">
                         <div class="col">
                             <%= form.check_box :other, {}, 1, nil %>
                             <%= form.label :other, "その他" %>
