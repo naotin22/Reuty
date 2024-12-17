@@ -38,7 +38,7 @@ table {
   margin: auto;
 }
 .text-list{
-  margin-top: 80px
+  vertical-align: middle;
 }
 
 .img-list {
