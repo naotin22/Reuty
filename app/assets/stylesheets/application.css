@@ -34,21 +34,21 @@
 }
 
 /* 一覧 */
-.block {
-  width: 80%;
-  padding: 10px;
+table {
   margin: auto;
 }
-.note {
-  width: 100%;
-/*  ここから */
-  line-height: 3;
-  background-image: linear-gradient(#ccc 1px, transparent 1px);
-  background-size: 100% 3em;
-  padding-bottom: 1px;
-/*  ここまで */
+.text-list{
+  margin-top: 80px
+}
+
+.img-list {
+  width: 200px;
 }
 .img-list img {
-  height: 20%;
+  width:100%;
   object-fit: cover;
+}
+
+.back {
+  text-align: end;
 }
