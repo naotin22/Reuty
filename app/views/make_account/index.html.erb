@@ -2,6 +2,7 @@
 <h2 class="text-center">アカウント作成</h2>
 
 <%= form_with url: make_account_create_path, model: @user do |form| %>
+    
     <div class = "row mb-3">
         <div class="col-xs-3">
             <div class="d-flex justify-content-center">
@@ -49,4 +50,8 @@
             </div>
         </div>    
     </div>
+    <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+
 <% end %>   
