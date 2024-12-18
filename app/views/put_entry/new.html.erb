@@ -1,7 +1,10 @@
 <h1>出品登録</h1>
 <div class="container">
-	<div class="row">
-		<div class="col-9">
+    <div class="row">
+        <div class="col">
+            <% @product.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
             <div>
                 <%= form_with url: put_entry_create_path, model: @product do |form| %>
 
@@ -23,7 +26,6 @@
                         <%= form.submit "出品" %>
                     </div>
                 <% end %>
-
             </div>
         </div>
     </div>
