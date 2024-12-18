@@ -51,10 +51,12 @@
         </div>    
     </div>
     <div class="col-xs-3">
-        <div class="d-flex justify-content-center">
-            <% @user.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
+        <div class="flex-lg-column">
+            <div class="d-flex justify-content-center">
+                <% @user.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </div>    
         </div> 
     </div>       
 
