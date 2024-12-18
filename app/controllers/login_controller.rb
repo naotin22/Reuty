@@ -17,6 +17,7 @@ class LoginController < ApplicationController
         redirect_to home_path
       end
     else
+      flash.now[:notice] = "メールアドレスかパスワードが間違っています"
       render :index
     end
   end

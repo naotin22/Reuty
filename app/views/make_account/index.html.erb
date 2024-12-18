@@ -50,8 +50,12 @@
             </div>
         </div>    
     </div>
-    <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-    <% end %>
+    <div class="col-xs-3">
+        <div class="d-flex justify-content-center">
+            <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </div> 
+    </div>       
 
 <% end %>   
