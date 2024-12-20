@@ -1,29 +1,45 @@
 <h1>出品登録</h1>
-<div class="container">
-    <div class="row">
-        <div class="col">
             <% @product.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
             <% end %>
-            <div>
+            
                 <%= form_with url: put_entry_create_path, model: @product do |form| %>
+                    <div class="col put_entry">
+                        <div class="box-child">
+                            画像
+                            <%= form.file_field :image %>
+                        </div>
 
-                    画像
-                    <%= form.file_field :image %>
+                        <div class="box-child">
+                            商品名
+                            <%= form.text_field :name %>
+                        </div>
 
-                    商品名
-                    <%= form.text_field :name %>
+                        <div class="box-child">
+                            価格
+                            <%= form.text_field :price %>
+                        </div>
 
-                    価格
-                    <%= form.text_field :price %>
-
-                    商品種別
-                    <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
-                    <div class="col-3">
-                        商品の説明
-                        <%= form.text_area :explanation %>
+                        <div class="box-child">
+                            商品種別
+                            <%= form.collection_select :product_class_id, @product_classes, :id, :name %>
+                        </div>
                         
-                        <%= form.submit "出品" %>
+                        <div class="box-child">
+                            
+                            
+                                商品の説明
+                                <input type="text" value="" placeholder="aaa">
+                                <%= form.text_area :explanation, style: "width:500px", rows: "3"%>
+                            
+                            </div>
+                        </div>
+
+                        <div class="box-child">
+                            <div class="text-center">
+                                <%= form.submit "出品" %>
+                            </div>
+                        </div>
                     </div>
                 <% end %>
             </div>
