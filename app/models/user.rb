@@ -8,6 +8,6 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :password, presence: true
   validates :mail, presence: true
-  validates :mail, uniqueness: { scope: :mail, message:"このメールアドレスは既に登録されています" }
+  validates :mail, uniqueness: { scope: :mail}
   validates :address, presence: true
 end

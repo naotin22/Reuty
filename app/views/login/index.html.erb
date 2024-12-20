@@ -1,6 +1,7 @@
 <h1 class="text-center">Reutyようこそ！</h1>
 <h2 class="text-center">ログイン</h2>
 
+
 <%= form_with url: login_create_path, model: @user do |form| %>
     <div class = "row mb-3">
         <div class="col-xs-3">
@@ -17,14 +18,22 @@
                 <%= form.text_field :password %>
             </div>    
         </div>
-    </div>    
+    </div>
+    <div class="d-flex justify-content-center">
+        <% if flash.now[:notice] %> 
+            <div class="flash">
+                <%= flash.now[:notice] %>
+            </div>
+        <% end %>
+    </div>          
     <div class = "row mb-3">
         <div class="col-xs-3">
             <div class="d-flex justify-content-center">
                 <%= form.submit "ログイン" %>
             </div>
         </div>
-    </div>            
+    </div>
+        
         
 
 <% end %>

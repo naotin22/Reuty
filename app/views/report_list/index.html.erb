@@ -13,7 +13,7 @@
             <% @reports[key].each_with_index do |report, index| %>
                 <% if index == 0 %>
                     <div class="col"><%= report.user.name %></div>
-                    <div class="col"><%= report.product.name  %></div>
+                    <div class="col"><%= link_to report.product.name, product_detail_path(report.product)  %></div>
                     <div class="col"><%= report.product.user.name  %></div>
                     <div class="col">
                 <% end%>
@@ -23,3 +23,4 @@
         </div>
     <% end %>
 </div>
+<%= link_to image_tag("/assets/back.png"), manage_path %>
