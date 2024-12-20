@@ -20,20 +20,22 @@
   <tbody class="table-group-divider">
     
     <% @favorites.each do |favorite| %>
-      <tr>
-        <td>
-          <div class="img-list">
+      <% if favorite.product.sale == "販売中" %>
+        <tr>
+          <td>
+            <div class="img-list">
               <% if favorite.product.image.present? %>
                 <%= link_to image_tag("/assets/product/#{favorite.product.image}"), product_detail_path(favorite.product.id) %>
               <% else %>
-                <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(favorite.product.id) %>
+                <%= link_to image_tag("/assets/product/sample.jfi"), product_detail_path(favorite.product.id) %>
               <% end %>
-          </div>
-        </td>
-        <td class="text-list"><h3><%= favorite.product.name %><h3></td>
-        <td class="text-list"><h3>￥<%= favorite.product.price %><h3></td>
-        <td class="text-list"><h3><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></h3></td>
-      </tr>
+            </div>
+          </td>
+          <td class="text-list"><h3><%= favorite.product.name %><h3></td>
+          <td class="text-list"><h3>￥<%= favorite.product.price %><h3></td>
+          <td class="text-list"><h3><%= link_to '削除', like_destroy_path(favorite.id), method: :delete, data: { confirm: 'Are you sure?' } %></h3></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
