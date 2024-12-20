@@ -27,7 +27,7 @@
               <% if favorite.product.image.present? %>
                 <%= link_to image_tag("/assets/product/#{favorite.product.image}"), product_detail_path(favorite.product.id) %>
               <% else %>
-                <%= link_to image_tag("/assets/product/sample.jfif"), product_detail_path(favorite.product.id) %>
+                <%= link_to image_tag("/assets/product/sample.jfi"), product_detail_path(favorite.product.id) %>
               <% end %>
             </div>
           </td>
