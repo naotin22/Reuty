@@ -9,6 +9,8 @@ class ProductDetailController < ApplicationController
     @question.user_id = current_user.id
     
     @favorite = Favorite.find_by(user_id: current_user.id, product_id: @product.id)
+
+    @current_user = current_user
   end
 
   def create
