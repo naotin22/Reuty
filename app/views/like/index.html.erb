@@ -1,14 +1,10 @@
 <p id="notice"><%= notice %></p>
-<div class="sticky-top text-bg-dark bg-gradient  shadow-sm d-flex align-items-center" style="height:50px;">
-  <div class="container">
-    <div class="row">
-      <h2 class="col">お気に入り一覧</h2>
-      <div class="col back"><%= link_to image_tag("/assets/back(2).png"), home_path %></div>
-    </div>
-  </div>
+<div class="container-fluid mx-0 sticky-top bg-dark bg-gradient shadow-sm d-flex align-items-center" style="height:7%;">
+  <h1 ><%= link_to "Reuty", home_path, class: "link" %></h1>
 </div>
 <table class="table table-sm">
   <thead>
+    <h2>お気に入り一覧</h2>
     <tr>
       <th>&nbsp;</th>
       <th><h3>商品名</h3></th>

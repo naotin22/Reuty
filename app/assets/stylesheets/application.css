@@ -71,3 +71,9 @@ table {
 .col put_entry{
   column-count: 2;
 }
+
+a.link:link, a.link:visited, a.link:hover, a.link:focus{
+  text-decoration: none;
+  color: white ;
+  background-color: transparent;
+}
