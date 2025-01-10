@@ -3,36 +3,38 @@
 
 
 <%= form_with url: login_create_path, model: @user do |form| %>
-    <div class = "row mb-3">
-        <div class="col-xs-3">
-            <div class="d-flex justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-2">
                 <label for="mail">メールアドレス</label>
+            </div>
+            <div class="col-2">
                 <%= form.text_field :mail %>
-            </div>    
-        </div>    
-    </div>
-    <div class = "row mb-3">  
-        <div class="col-xs-3">
-            <div class="d-flex justify-content-center">
-                <label for="password">パスワード</label>
-                <%= form.text_field :password %>
-            </div>    
+            </div>        
         </div>
-    </div>
+        <div class="row justify-content-center">
+            <div class="col-2">
+                <label for="mail">パスワード</label>
+            </div>
+            <div class="col-2">
+                <%= form.text_field :password %>
+            </div>        
+        </div>
+        
+
+        <div class="row justify-content-center">
+            <div class="col-2">
+                <%= form.submit "ログイン" %>
+            </div>        
+        </div>          
+    </div>    
     <div class="d-flex justify-content-center">
         <% if flash.now[:notice] %> 
             <div class="flash">
                 <font size="4" color="red"><%= flash.now[:notice] %></font>
             </div>
         <% end %>
-    </div>          
-    <div class = "row mb-3">
-        <div class="col-xs-3">
-            <div class="d-flex justify-content-center">
-                <%= form.submit "ログイン" %>
-            </div>
-        </div>
-    </div>
+    </div>    
         
         
 
