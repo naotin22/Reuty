@@ -1,22 +1,10 @@
-<div class="sticky-top text-bg-dark bg-gradient  shadow-sm d-flex align-items-center" style="height:50px;">
-    <div class="container">
-        <div class="row">
-            <h2 class="col">出品一覧</h2>
-        </div>
-    </div>
+<p id="notice"><%= notice %></p>
+<div class="container-fluid mx-0 sticky-top bg-dark bg-gradient shadow-sm d-flex align-items-center" style="height:7%;">
+    <h1 class="text-center"><%= link_to "Reuty", home_path, class: "link" %></h1>
 </div>
-
-<div class="card text-center">
-    <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-            <a class="nav-link" href="#"><%= link_to image_tag("/assets/back(2).png"), home_path %></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><%= link_to image_tag("/assets/put_entry.png"), put_entry_new_path %></a>
-        </li>
-        </ul>
-    </div>
+<div>&nbsp;</div>
+<div class="text-end">
+    <%= link_to image_tag("/assets/put_entry.png"), put_entry_new_path %>
 </div>
 
 
