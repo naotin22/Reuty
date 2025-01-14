@@ -6,11 +6,19 @@
     </div>
 </div>
 
-<div><%= link_to image_tag("/assets/back(2).png"), home_path %></div>
-
-<div class="text-end">
-    <%= link_to image_tag("/assets/put_entry.png"), put_entry_new_path %>
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="#"><%= link_to image_tag("/assets/back(2).png"), home_path %></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><%= link_to image_tag("/assets/put_entry.png"), put_entry_new_path %></a>
+        </li>
+        </ul>
+    </div>
 </div>
+
 
 
 <table class="table table-sm">

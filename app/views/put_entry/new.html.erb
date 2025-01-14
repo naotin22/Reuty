@@ -1,7 +1,9 @@
 <h1>出品登録</h1>
-            <% @product.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
+            <div class="d-flex justify-content-center">
+                <% @product.errors.full_messages.each do |message| %>
+                    <font color="red"><%= message %>
+                <% end %>
+            </div>
             
                 <%= form_with url: put_entry_create_path, model: @product do |form| %>
                     <div class="col put_entry">
@@ -42,10 +44,6 @@
                         </div>
                     </div>
                 <% end %>
-            </div>
-        </div>
-    </div>
-</div>
 <div>
     <%= link_to image_tag("/assets/back.png"), put_list_path(@current_user_id) %>
 </div>
