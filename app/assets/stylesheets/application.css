@@ -77,3 +77,9 @@ a.link:link, a.link:visited, a.link:hover, a.link:focus{
   color: white ;
   background-color: transparent;
 }
+
+.kakute{
+  height:790px;
+  line-height:790px;
+  text-align:center;
+}
