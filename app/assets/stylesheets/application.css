@@ -32,6 +32,9 @@
   border-radius: 50%;
   object-fit: cover;
 }
+.img-product {
+  width:80%;
+}
 
 /* 一覧 */
 table {

@@ -24,7 +24,7 @@
         <div class="col">
             <div>
                 <% if @product.image.present? %>
-                    <%= image_tag "product/#{@product.image}", {class: "img-fluid"} %>
+                    <%= image_tag "product/#{@product.image}", {class: "img-product"} %>
                 <% end %>
             </div>
             <% if @current_user.manage_flag %>
@@ -50,7 +50,7 @@
                                 <%= image_tag("/assets/detail_famous.png") %>
                             <% end %>
                         </div>
-                        <div><h4><%= @product.favorites.count %></h4></div>
+                        <div><h4><%= @product.favorites.count %></h4>人がお気に入り</div>
                     </div>
                     <div class="col"><%= link_to image_tag("/assets/report.png"), customer_report_new_path(@product.id) %></div>
                 </div>

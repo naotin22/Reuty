@@ -9,6 +9,17 @@
 u1 = User.create(name: "佐藤", password: "satou", mail: "satou@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
 u2 = User.create(name: "らいき", password: "raiki", mail: "raiki@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
 u3 = User.create(name: "ｋｋ", password: "kk", mail: "kk@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
+u4 = User.create(name: "山田太郎", password: "1111", mail: "1111@xxxx", address: "出雲市大津町", manage_flag: false, stop_flag: false )
+u5 = User.create(name: "田中花子", password: "2222", mail: "2222@xxxx", address: "出雲市", manage_flag: false, stop_flag: false )
+u6 = User.create(name: "鈴木一郎", password: "3333", mail: "3333@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u7 = User.create(name: "", password: "4444", mail: "4444@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u8 = User.create(name: "", password: "5555", mail: "5555@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u9 = User.create(name: "", password: "6666", mail: "6666@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u10 = User.create(name: "", password: "7777", mail: "7777@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u11 = User.create(name: "", password: "8888", mail: "8888@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u12 = User.create(name: "", password: "9999", mail: "9999@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u13 = User.create(name: "", password: "0000", mail: "0000@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+
 # 管理者
 u4 = User.create(name: "みさき", password: "misaki", mail: "misaki@xxxx", address:"出雲市ｘｘ町", manage_flag:true, stop_flag:false)
 # 停止された人
@@ -34,6 +45,12 @@ p31 = Product.create(name: "U3男子制服", price:2700, explanation: "出雲商
 p32 = Product.create(name: "U3女子制服",  price:2700, explanation: "出雲商業のせいふくです", user_id: u3.id, product_class_id: pc1.id, image: "sample2.png", sale: "販売中")
 p33 = Product.create(name: "U3数学の教科書", price:1200, explanation: "出雲商業の数学の教科書です", user_id: u3.id, product_class_id: pc2.id, image: "text.png", sale: "販売中")
 p34 = Product.create(name: "U3青鞄", price:900, explanation: "出雲商業の鞄です", user_id: u3.id, product_class_id: pc3.id, image: "kaban.png", sale: "販売中")
+
+#u4が出品した商品
+
+#u5が出品した商品
+
+#u6が出品した商品
 
 #通報種別
 rc1 = ReportClass.create(comment: "不適切な商品である")
