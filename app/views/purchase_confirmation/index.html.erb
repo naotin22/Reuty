@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div class="container-fluid mx-0 sticky-top bg-dark bg-gradient shadow-sm d-flex align-items-center" style="height:7%;">
+    <h1 class="text-center"><%= link_to "Reuty", home_path, class: "link" %></h1>
+</div>
 
-<h2 class = "text-center" >
+<h2 class = "kakute" >
     <%= link_to "購入を確定する", purchase_confirmation_update_path(@product.id), method: :patch %>
 </h2>
 
-<%= link_to image_tag("/assets/back.png"), product_detail_path(@product.id) %>
+<div class = "back">
+    <%= link_to image_tag("/assets/back.png"), product_detail_path(@product.id) %>
+</div>
 
 
