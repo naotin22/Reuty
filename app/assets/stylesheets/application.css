@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+.icon {
+  width: 45px;
+}
+.icon img {
+  width: 40px;
+
+}
 
 .login {
   background: url('images/main-bg.png');
