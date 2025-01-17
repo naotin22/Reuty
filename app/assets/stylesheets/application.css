@@ -15,8 +15,8 @@
  */
 
 .login {
-  background: url('images/main-bg.png');
-  background-repeat: no-repeart;
+  background-image: image-url('Reuty/app/assets/images/main-bg.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
 }
  /* ホーム */
