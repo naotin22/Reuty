@@ -42,7 +42,7 @@ p23 = Product.create(name: "赤鞄", price:1000, explanation: "出雲商業の�
 p24 = Product.create(name: "数2の教科書", price:800, explanation: "出雲工業の数学の教科書です 令和４年に購入しました", user_id: u2.id, product_class_id: pc2.id, image: "教科書(数学).png", sale: "販売中")
 p25 = Product.create(name: "鞄", price:1000, explanation: "出雲農林の鞄です", user_id: u2.id, product_class_id: pc3.id, image: "鞄.png", sale: "販売中")
 p26 = Product.create(name: "出雲高校の男子制服", price:2500, explanation: "出雲高校のせいふくです", user_id: u2.id, product_class_id: pc1.id, image: "学ラン.png", sale: "販売中")
-p21 = Product.create(name: "出雲西高校の女子制服", price:3500, explanation: "出雲西高校の女性用のせいふくです", user_id: u2.id, product_class_id: pc1.id, image: "制服（女性用）.png", sale: "販売中")
+p27 = Product.create(name: "出雲西高校の女子制服", price:3500, explanation: "出雲西高校の女性用のせいふくです", user_id: u2.id, product_class_id: pc1.id, image: "制服（女性用）.png", sale: "販売中")
 
 
 # u3が出品した商品
