@@ -9,17 +9,22 @@
 u1 = User.create(name: "佐藤", password: "satou", mail: "satou@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
 u2 = User.create(name: "らいき", password: "raiki", mail: "raiki@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
 u3 = User.create(name: "ｋｋ", password: "kk", mail: "kk@xxxx", address:"出雲市ｘｘ町", manage_flag:false, stop_flag:false)
-u4 = User.create(name: "山田太郎", password: "1111", mail: "1111@xxxx", address: "出雲市大津町", manage_flag: false, stop_flag: false )
-u5 = User.create(name: "田中花子", password: "2222", mail: "2222@xxxx", address: "出雲市", manage_flag: false, stop_flag: false )
-u6 = User.create(name: "鈴木一郎", password: "3333", mail: "3333@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-u7 = User.create(name: "", password: "4444", mail: "4444@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-u8 = User.create(name: "", password: "5555", mail: "5555@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-u9 = User.create(name: "", password: "6666", mail: "6666@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-u10 = User.create(name: "", password: "7777", mail: "7777@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-u11 = User.create(name: "", password: "8888", mail: "8888@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-u12 = User.create(name: "", password: "9999", mail: "9999@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-u13 = User.create(name: "", password: "0000", mail: "0000@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
-
+u4 = User.create(name: "本田", password: "1055", mail: "5763@xxxx", address: "出雲市", manage_flag: false, stop_flag: false )
+u5 = User.create(name: "高橋", password: "0226", mail: "1476@xxxx", address: "出雲市", manage_flag: false, stop_flag: false )
+u6 = User.create(name: "渡辺", password: "3016", mail: "7657@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u7 = User.create(name: "吉田", password: "0465", mail: "9673@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u8 = User.create(name: "久保", password: "5039", mail: "5719@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u9 = User.create(name: "中村", password: "0647", mail: "2047@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u10 = User.create(name: "権田", password: "7020", mail: "4640@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u11 = User.create(name: "前田", password: "0895", mail: "3045@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u12 = User.create(name: "遠藤", password: "9031", mail: "3758@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u13 = User.create(name: "安田", password: "1065", mail: "0489@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u14 = User.create(name: "山本", password: "1135", mail: "2053@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u15 = User.create(name: "加藤", password: "1223", mail: "8905@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u16 = User.create(name: "石川", password: "1353", mail: "2937@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u17 = User.create(name: "橋本", password: "1421", mail: "2356@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u18 = User.create(name: "木村", password: "1547", mail: "3958@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
+u19 = User.create(name: "川村", password: "1637", mail: "9385@xxxx", adress:"出雲市", manage_flag: false, stop_flag:false )
 # 管理者
 u4 = User.create(name: "みさき", password: "misaki", mail: "misaki@xxxx", address:"出雲市ｘｘ町", manage_flag:true, stop_flag:false)
 # 停止された人
@@ -41,10 +46,13 @@ p22 = Product.create(name: "U2国語の教科書", price:800, explanation: "出�
 p23 = Product.create(name: "U2赤鞄", price:1000, explanation: "出雲商業の鞄です", user_id: u2.id, product_class_id: pc3.id, image: "kaban2.png", sale: "販売中")
 
 # u3が出品した商品
-p31 = Product.create(name: "U3男子制服", price:2700, explanation: "出雲商業のせいふくです", user_id: u3.id, product_class_id: pc1.id, image: "sample.jfi", sale: "販売中")
-p32 = Product.create(name: "U3女子制服",  price:2700, explanation: "出雲商業のせいふくです", user_id: u3.id, product_class_id: pc1.id, image: "sample2.png", sale: "販売中")
-p33 = Product.create(name: "U3数学の教科書", price:1200, explanation: "出雲商業の数学の教科書です", user_id: u3.id, product_class_id: pc2.id, image: "text.png", sale: "販売中")
-p34 = Product.create(name: "U3青鞄", price:900, explanation: "出雲商業の鞄です", user_id: u3.id, product_class_id: pc3.id, image: "kaban.png", sale: "販売中")
+p31 = Product.create(name: "出雲商業の男子制服", price:2700, explanation: "出雲商業の制服です。サイズは175です。", user_id: u3.id, product_class_id: pc1.id, image: "sample.jfi", sale: "販売中")
+p32 = Product.create(name: "出雲高校の女子制服",  price:2800, explanation: "出雲高校の制服です。サイズは160です", user_id: u3.id, product_class_id: pc1.id, image: "sample2.png", sale: "販売中")
+p33 = Product.create(name: "令和6年度数1教科書", price:1200, explanation: "令和5年度購入の数1の教科書です。", user_id: u3.id, product_class_id: pc2.id, image: "text.png", sale: "販売中")
+p34 = Product.create(name: "ランドセル", price:1200, explanation: "昔使っていたランドセルです。", user_id: u3.id, product_class_id: pc3.id, image: "kaban.png", sale: "販売中")
+p35 = Product.create(name: "出雲商業の学ラン", price:1000, explanation: "出雲商業の男子制服の上着です。サイズは170です。", user_id: u3.id, product_class_id: pc1.id, image: "sample.jfi", sale: "販売中")
+p36 = Product.create(name: "斐川東中学校の男子制服", price:1300, explanation: "斐川東中学校の男子制服です。サイズは170です。", user_id: u3.id, product_class_id: pc1.id, image: "sample.jfi", sale: "販売中")
+
 
 #u4が出品した商品
 
