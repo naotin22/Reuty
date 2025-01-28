@@ -30,7 +30,7 @@
           <% else %>
             <div class="card border-dark mb-3">
               <div class="img-container">
-                <%= link_to image_tag("/assets/product/#{p.image}"), product_detail_path(p.id) %>
+                <%= link_to image_tag("/assets/product/#{p.image}"), product_detail_path(p.id), class: 'link' %>
               </div>
             </div>
           <% end %>
