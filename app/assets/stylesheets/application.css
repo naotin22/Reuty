@@ -21,11 +21,6 @@
   width: 40px;
 }
 
-.login {
-  background-image: image-url('Reuty/app/assets/images/main-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
  /* ホーム */
 .img-container img {
   width: 100%;
