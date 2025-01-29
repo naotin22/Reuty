@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :purchases
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  root to: "login#index"
   # ログイン
   get "login", to: "login#index", as: :login
   post "login", to: "login#create", as: :login_create
