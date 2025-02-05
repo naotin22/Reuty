@@ -13,7 +13,7 @@ Report.delete_all
 Favorite.delete_all
 Purchase.delete_all
 
-u1 = User.create(name: "佐藤", password: "satou", mail: "satou@xxxx", address:"出雲市ｘｘ町", image:"aicon.png", manage_flag:false, stop_flag:false)
+u1 = User.create(name: "佐藤", password: "0622", mail: "satou@xxxx", address:"出雲市ｘｘ町", image:"aicon.png", manage_flag:false, stop_flag:false)
 u2 = User.create(name: "らいき", password: "raiki", mail: "raiki@xxxx", address:"出雲市ｘｘ町", image:"aicon.png", manage_flag:false, stop_flag:false)
 u3 = User.create(name: "ｋｋ", password: "kk", mail: "kk@xxxx", address:"出雲市ｘｘ町", image:"aicon.png", manage_flag:false, stop_flag:false)
 u4 = User.create(name: "本田", password: "1055", mail: "5763@xxxx", address: "出雲市", image:"aicon.png", manage_flag: false, stop_flag: false )
